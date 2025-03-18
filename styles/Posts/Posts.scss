@@ -37,7 +37,7 @@
                     font-weight: 600;
                     color: darken($color: gray, $amount: 10%);
                     &__img{
-                        background: url('../images/MLBB_Argus_DarkDraconic_skin.JPG');
+                        background: url('./images/MLBB_Argus_DarkDraconic_skin.JPG');
                         background-size: 10rem;
                         background-position-y: center top;
                         background-position-x: center top;
@@ -91,7 +91,7 @@
                     }
                 }
                 &__file{
-                    width: 100%;
+                    width: 500px;
                     height: 500px;
                     border-radius: 8px;
                     visibility: visible;
@@ -176,13 +176,13 @@
     }
 }
 .file1{
-    background: url('../../Images/MLBB_Argus_DarkDraconic_skin.JPG');
+    background: url('./images/MLBB_Argus_DarkDraconic_skin.JPG');
     background-size: cover;
     background-position-y: top;
     background-position-x: center;
 }
 .file2{
-    background: url('../../images/maxresdefault.jpg');
+    background: url('./images/maxresdefault.jpg');
     background-size: cover;
     // background-position-y: top;
     // background-position-x: center;
