@@ -1,0 +1,11 @@
+@import "./basic.scss";
+.content_holder{
+    width: calc(100% - 250px);
+    height: auto;
+    padding: 0.8rem 1rem;
+    display: flex;
+    flex-direction: column;
+    @include mobile{
+        width: calc(100% - 65px);
+    }
+}

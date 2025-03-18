@@ -1,0 +1,81 @@
+
+@import "../All-style/basic";
+.dashboard{
+    background: darken(skyblue, 25%);
+    color: white;
+}
+.content_holder{
+    display: flex;
+    flex-direction: column;
+
+    &__chart-container{
+        width: 100%;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+        border: solid 1px gray;
+        border-radius: 8px;
+        background: rgb(228, 250, 255);
+        @include mobile{
+            width: 100%;
+            height: auto;
+        }
+        &__subtitle{
+            font-size: 0.9rem;
+            word-spacing: 5px;
+            color: rgb(104, 104, 104);
+            padding: 0.5rem;
+            text-decoration: overline;
+            @include mobile{
+                font-size: 0.7rem;
+            }
+        }
+        
+    }
+    &__description{
+        padding: 0.6rem 0.5rem;
+        &__box{
+            margin: 0.2rem 0;
+            padding: 0.1rem 0;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+            &__heading{
+                padding: 0.5rem 0;
+            }
+        }
+    }
+    &__footer{
+        background: lighten($color: #82d7ff, $amount: 5%);
+        color: darken($color: #ffffff, $amount: 75%);
+        margin: 1rem -1rem -0.8rem -1rem;
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 1rem;
+        @include mobile{
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.8rem 0;
+            gap: 0.5rem;
+        }
+        &__policy{
+            margin-top: 1rem;
+            border-left: 1px solid #8f8f8f;
+            @include mobile{
+                border-left: none;
+                border-top: 1px solid #8f8f8f;
+            }
+        }
+        &__outroduction{
+            border-left: 1px solid #8f8f8f;
+            padding: 0.5rem 0.8rem;
+            @include mobile{
+                border-left: none;
+                border-top: 1px solid #8f8f8f;
+            }
+        }
+    }
+}

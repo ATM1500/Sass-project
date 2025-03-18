@@ -1,0 +1,159 @@
+@import "./basic.scss";
+
+.sidebar{
+    position: sticky;
+    top: 0;
+    user-select: none;
+    width: 250px;
+    height: 100vh;
+    background: darken($backgroundColor__light, 10%);
+    overflow-x: hidden;
+    scrollbar-width: none;
+    @include mobile{
+        padding: 0.5rem 6px;
+        width: 65px;
+    }
+    &__logo{
+        height: 10%;
+        font-size: 1.3rem;
+        width: 100%;
+        padding: 0.8rem 0;
+        background: lighten($backgroundColor__light, 3%);
+        font-weight:600;
+        @include mobile{
+            border-radius: 8px;
+            height: 12.5%;
+        }
+        &__linked{
+            height: 100%;
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: lighten(black, 20%);
+            
+            &__title{
+                @include mobile{
+                    display: none;
+                }
+            }
+        }
+    }
+    &__items{
+        height: 75%;
+        width: 100%;
+        padding: 0.8rem 5%;
+        @include mobile{
+            height: 75%;
+            
+        }
+        &__list{
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            &__item{
+                width: 100%;
+                height: auto;
+                margin: 0.8rem 0;
+                &__link{
+                    width: 100%;
+                    padding: 0.8rem 0;
+                    background-color: lighten(skyblue, 20%);
+                    color: black;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    border-radius: 8px;
+                    border: none;
+                    text-decoration: none;
+                    transition: 0.15s ease;
+                    &:hover{
+                        // background: lighten(cyan, 40%);
+                        // color: black;                        
+                        transform: scale(0.95);
+                    }
+                    &:active{                      
+                        // background: lighten(cyan, 30%);
+                        transform: scale(0.9);
+                    }
+                    @include mobile{
+                        cursor: pointer;
+                        &:hover{
+                            transform: scale(0.95);
+                        }
+                        &:active{
+                            transform: scale(0.85);
+                        }
+                    }
+                    &__title{
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &__item:first-child{
+                margin-top: 0;
+            }
+        }
+    }
+    &__footer{
+        width: 100%;
+        height: 15%;
+        padding: 0.8rem 0.6rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: darken(white, 10%);
+        background: darken($backgroundColor__light, 30%);
+        @include mobile{
+            height: 12.5%;
+            border-radius: 8px;
+            padding: 1rem 0.6rem;
+            cursor: pointer;
+            transition: 0.15s ease;
+            &:hover{
+                transform: scale(1.05);
+            }
+            &:active{
+                transform: scale(1);
+                background: darken($backgroundColor__light, 40%);
+            }
+        }
+        &__img{
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background: url("../Images/seal-black.png");
+            background-size: cover;
+            background-position: center;
+            @include mobile{
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &__text{
+            width: 80%;
+            height: auto;
+            display: inline-block;
+            @include mobile{
+                display: none;
+            }
+        }
+        &__linked{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: darken(white, 10%);
+            gap: 0.6rem;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

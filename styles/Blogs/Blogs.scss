@@ -1,0 +1,126 @@
+@import "../All-style/basic";
+
+$max-line: 5;
+
+.blogs{
+    background: darken(skyblue, 25%);
+    color: white;
+}
+.content_holder{
+    display: flex;
+    flex-direction: column;
+    &__blog{
+        border: 1px solid gray;
+        border-radius: 8px;
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+        &__title{
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: auto;
+            @include mobile{
+                margin: 0.2rem 0 0.3rem 0;
+            }
+            &__header{
+                text-align: center;
+                margin: 0.2rem 0 1rem 0;
+                @include mobile{
+                    margin: 0.2rem 0 0 0;
+                }
+            }
+            &__date{
+                font-size: 0.9rem;
+                word-spacing: 2px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: auto;
+                bottom: auto;
+                @include mobile{
+                    position: static;
+                }
+            }
+        }
+        
+        &__sort-button{
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            background: lighten($color: rgb(19, 0, 128), $amount: 65%);
+            border: none;
+            border-radius: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.15s ease;
+            &:hover{
+                background: lighten($color: rgb(19, 0, 128), $amount: 60%);
+            }
+            &:active{
+                background: lighten($color: rgb(19, 0, 128), $amount: 55%);
+            }
+        }   
+    }
+    &__footer{
+        background: lighten($color: #82d7ff, $amount: 5%);
+        color: darken($color: #ffffff, $amount: 75%);
+        margin: 1rem -1rem -0.8rem -1rem;
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 1rem;
+        @include mobile{
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.8rem 0;
+            gap: 0.5rem;
+        }
+        &__policy{
+            margin-top: 1rem;
+            border-left: 1px solid #8f8f8f;
+            @include mobile{
+                border-left: none;
+                border-top: 1px solid #8f8f8f;
+            }
+        }
+        &__outroduction{
+            border-left: 1px solid #8f8f8f;
+            padding: 0.5rem 0.8rem;
+            @include mobile{
+                border-left: none;
+                border-top: 1px solid #8f8f8f;
+            }
+        }
+    }
+}
+.text1{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow-y: hidden;
+}
+.text2{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow-y: hidden;
+}
+.text3{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow-y: hidden;
+}
+.blog1{
+    background: lighten($color: #62c5ff, $amount: 20%);
+}
+.blog2{
+    background: lighten($color: #ff7979, $amount: 18%);
+}
+.blog3{
+    background: lighten($color: #ffcc66, $amount: 15%);
+}

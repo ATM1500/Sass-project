@@ -1,0 +1,23 @@
+
+$backgroundColor__light: rgb(222, 237, 247);
+
+@mixin mobile{
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen and (min-width: 768px){
+        @content;
+    }
+}
+@mixin tablet{
+    @media only screen and (max-width: 1080px){
+        @content;
+    }
+}
+@mixin under_mobile{
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}

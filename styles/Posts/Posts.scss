@@ -1,0 +1,195 @@
+@import "../All-style/basic";
+.posts{
+    background: darken(skyblue, 25%);
+    color: white;
+}
+.content_holder{
+    display: flex;
+    flex-direction: column;
+    &__post-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem 0;
+        gap: 1rem;
+        &__post{
+            border: 1px solid gray;
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            background:white ;
+            overflow-x: hidden;
+            @include mobile{
+                padding: 0.5rem 0.5rem;
+            }
+            &__header{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                &__profile{
+                    width: initial;
+                    font-size: 1.05rem;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.8rem;
+                    font-weight: 600;
+                    color: darken($color: gray, $amount: 10%);
+                    &__img{
+                        background: url('../../Images/MLBB_Argus_DarkDraconic_skin.jpg');
+                        background-size: 10rem;
+                        background-position-y: center top;
+                        background-position-x: center top;
+                        border-radius: 1.5rem;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
+                }
+                &__link{
+                    font-size: 0.9rem;
+                    background: lighten($color: rgb(42, 99, 255), $amount: 10%);
+                    text-decoration: none;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    transition: 0.1s linear;
+                    &:hover{
+                        background: lighten($color: rgb(42, 99, 255), $amount: 15%);
+                        transform: scale(1.05);
+                    }
+                    &:active{
+                        background: lighten($color: rgb(42, 99, 255), $amount: 20%);
+                        transform: scale(1);
+                    }
+                }
+            }
+            &__content{
+                margin: 0.8rem 0 0 0;
+                &__text{
+                    visibility: visible;
+                    margin: 0.5rem 0;
+                }
+                &__sbtn{
+                    padding: 0.5rem 1rem;
+                    margin: 0.5rem 0;
+                    background: lighten($color: rgb(0, 60, 128), $amount: 65%);
+                    border: none;
+                    border-radius: 1rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    user-select: none;
+                    transition: 0.15s ease;
+                    &:hover{
+                        background: lighten($color: rgb(0, 60, 128), $amount: 60%);
+                        transform: scale(1.05);
+                    }
+                    &:active{
+                        background: lighten($color: rgb(0, 60, 128), $amount: 55%);
+                        transform: scale(1);
+                    }
+                }
+                &__file{
+                    width: 100%;
+                    height: 500px;
+                    border-radius: 8px;
+                    @include mobile{
+                        background-position-y: top;
+                        background-position-x: center left left;
+                    }
+                    &__linked{
+                        display: block;
+                        width:100%;
+                        height: 100%;
+                        cursor: pointer;
+                        font-size: 0;
+                    }
+
+                }
+            }
+            &__footer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                // border: 1px solid gray;
+                margin: 0.3rem 0 0 0;
+                border-radius: 5px;
+                background: white;
+                &__expression{
+                    text-align: center;
+                    padding: 4px 12%;
+                    border: 1px solid gray;
+                    margin: 0.3rem 0.3rem;
+                    border-radius: 3px;
+                    background: lighten(lightblue, 15%);
+                    @include tablet{
+                        padding: 2px 8%;
+                        margin: 0.2rem 0.2rem;
+                    }
+                    @include mobile{
+                        padding: 2px 7%;
+                        margin: 0.2rem 0.2rem;
+                    }
+                    @include under_mobile{
+                        padding: 2px 5%;
+                        overflow-x: hidden;
+                    }
+                }
+
+            }
+        }
+    }
+    &__footer{
+        background: lighten($color: #82d7ff, $amount: 5%);
+        color: darken($color: #ffffff, $amount: 75%);
+        margin: 1rem -1rem -0.8rem -1rem;
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 1rem;
+        @include mobile{
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.8rem 0;
+            gap: 0.5rem;
+        }
+        &__policy{
+            margin-top: 1rem;
+            border-left: 1px solid #8f8f8f;
+            @include mobile{
+                border-left: none;
+                border-top: 1px solid #8f8f8f;
+            }
+        }
+        &__outroduction{
+            border-left: 1px solid #8f8f8f;
+            padding: 0.5rem 0.8rem;
+            @include mobile{
+                border-left: none;
+                border-top: 1px solid #8f8f8f;
+            }
+        }
+    }
+}
+.file1{
+    background: url('../../Images/MLBB_Argus_DarkDraconic_skin.jpg');
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+}
+.file2{
+    background: url('../../Images/maxresdefault.jpg');
+    background-size: cover;
+    // background-position-y: top;
+    // background-position-x: center;
+}
+.text3{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow-y: hidden;
+}
