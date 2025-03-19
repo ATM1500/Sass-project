@@ -185,7 +185,9 @@
     background: url('./images/maxresdefault.JPG');
     background-size: cover;
     // background-position-y: top;
-    // background-position-x: center;
+    @include mobile{
+        background-position-x: center;
+    }
 }
 .text3{
     display: -webkit-box;
