@@ -77,7 +77,7 @@
                             text-align: center;
                         }
                         @include under_mobile{
-                            visibility: hidden;
+                            display: none;
                         }
                     }
                 }
