@@ -17,7 +17,7 @@ $backgroundColor__light: rgb(222, 237, 247);
     }
 }
 @mixin under_mobile{
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 400px) {
         @content;
     }
 }
