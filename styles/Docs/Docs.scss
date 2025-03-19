@@ -3,3 +3,118 @@
     background: darken(skyblue, 25%);
     color: white;
 }
+
+.content_holder{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &__docs-holder{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        &__doc{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            border: 1px solid gray;
+            border-radius: 8px;
+            padding: 0.8rem;
+            position: relative;
+            background: white;
+            &__header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 0.8rem 0;
+                border-bottom: 1px solid gray;
+                text-align: center;
+                &__title{
+                    margin: 0.5rem 0;
+                    @include mobile{
+                        margin: 0;
+                    }
+                }
+                &__date{
+                    position: absolute;
+                    top:0.5rem;
+                    right: 0.5rem;
+                    @include mobile{
+                        font-size: 0.9rem;
+                        position: static;
+                    }
+                }
+                
+            }
+            &__content{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding:0.8rem 0.5rem;
+                &__section{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    gap: 1.5rem;
+                    font-weight: 600;
+                    @include mobile{
+                        gap: 1.3rem;
+                    }
+                    &__link{
+                        color: rgb(82, 82, 82);
+                        padding: 0.3rem 0.2rem;
+                        border-bottom: solid 1px gray;
+                        cursor: pointer;
+                        user-select: none;
+                        @include mobile{
+                            padding: 0.3rem 0;
+                            font-size: 0.9rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__footer{
+        background: lighten($color: #82d7ff, $amount: 5%);
+        color: darken($color: #ffffff, $amount: 75%);
+        margin: 1rem -1rem -0.8rem -1rem;
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 1rem;
+        @include mobile{
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.8rem 0;
+            gap: 0.5rem;
+        }
+        &__policy{
+            margin-top: 1rem;
+            border-left: 1px solid #8f8f8f;
+            @include mobile{
+                border-left: none;
+                border-top: 1px solid #8f8f8f;
+            }
+        }
+        &__outroduction{
+            border-left: 1px solid #8f8f8f;
+            padding: 0.5rem 0.8rem;
+            @include mobile{
+                border-left: none;
+                border-top: 1px solid #8f8f8f;
+            }
+        }
+    }
+}
+.link1{
+    color: lightseagreen;
+    border-bottom: solid 2px lightseagreen;
+}
