@@ -9,10 +9,13 @@
     background: darken($backgroundColor__light, 10%);
     overflow-x: hidden;
     scrollbar-width: none;
+    transition: 0.15s ease;
+    
     @include mobile{
         padding: 0.5rem 6px;
         width: 65px;
     }
+    
     &__logo{
         height: 10%;
         font-size: 1.3rem;
@@ -155,5 +158,46 @@
             width: 100%;
             height: 100%;
         }
+    }
+}
+
+.sidebar_hide{
+    font-size: 1.4rem;
+    color: rgb(68, 68, 68);
+    position: fixed;
+    top: 6rem;
+    left: -7px;
+    z-index: 5;
+    cursor: pointer;
+    transition: 0.15s ease;
+    
+    
+}
+.sidebar_show{
+    font-size: 1.4rem;
+    color: rgb(68, 68, 68);
+    position: fixed;
+    top: 6rem;
+    left: 3.8rem !important;
+    z-index: 5;
+    cursor: pointer;
+    
+}
+.hidden-sidebar{
+    @include under_mobile{
+        display: none;
+    }
+}
+#sidebar-hide{
+    &:hover{
+        transform: scale(1.05);
+        color: rgb(92, 92, 92);
+    }
+    &:active{
+        transform: scale(1);
+        color: rgb(100, 100, 100);
+    }
+    @include above_mobile{
+        visibility: hidden !important;;
     }
 }
