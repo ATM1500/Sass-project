@@ -63,6 +63,9 @@
                         background: lighten($color: rgb(42, 99, 255), $amount: 20%);
                         transform: scale(1);
                     }
+                    @include under_mobile{
+                        padding: 0.5rem 0.5rem;
+                    }
                 }
             }
             &__content{
@@ -134,8 +137,10 @@
                         margin: 0.2rem 0.2rem;
                     }
                     @include under_mobile{
-                        padding: 2px 5%;
+                        padding: 2px 1%;
+                        width: 120px;
                         overflow-x: hidden;
+                        text-align: center;
                     }
                 }
 

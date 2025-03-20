@@ -9,3 +9,9 @@
         width: calc(100% - 65px);
     }
 }
+
+.content_holder-full{
+    @include under_mobile{
+        width: 100% !important;
+    }
+}

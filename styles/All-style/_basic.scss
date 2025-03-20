@@ -21,3 +21,8 @@ $backgroundColor__light: rgb(222, 237, 247);
         @content;
     }
 }
+@mixin above_mobile{
+    @media only screen and (min-width: 501px) {
+        @content;
+    }
+}
