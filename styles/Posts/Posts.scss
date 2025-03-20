@@ -137,8 +137,9 @@
                         margin: 0.2rem 0.2rem;
                     }
                     @include under_mobile{
-                        padding: 2px 1%;
-                        font-size: 13px;
+                        padding: 2px 0.5%;
+                        font-size: 10px;
+                        
                         width: 120px;
                         overflow-x: hidden;
                         text-align: center;
